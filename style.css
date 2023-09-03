@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    margin: 0;
+}
+
+    .title {
+    color: #202020;
+    font-family: Ubuntu;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    border: none;
+    border-radius: 5px;
+    background: #5528FF;;
+    color: #FFF;
+    font-family: Ubuntu;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 4.5px 15px;
+}
+
+ul {
+    color: #202020;
+    font-family: Ubuntu;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.header-main{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    margin:3% 19%;
+    
+}
+
+.logo-conteiner {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    gap: 37px;
+}
+
+.footer-conteiner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+    
+.logo-block {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin: 0 19% 3% 0;
+}
+
+.footer-conteiner img {
+    margin:0 0 3% 19%;
+}
+
+.main-conteiner {
+    margin:0 19%;
+}
+
+h2 {
+    color: #202020;
+    font-family: Ubuntu;
+    font-size: 57px;
+    font-weight: 700;
+    margin-bottom: 35px;
+}
+
+.main-conteiner p {
+    color: #4F4F4F;
+    font-family: Ubuntu;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160.86%; 
+    width: 741px;
+    height: 196px;
+    margin-bottom: 70px;
+}
+
+.main-conteiner button {
+
+    border-radius: 10px;
+    background: #5528FF;
+    color: #FFF;
+    font-family: Ubuntu;
+    font-size: 24px;
+    font-weight: 400;
+    padding: 16px 58px;
+}
+
+.img-wide {
+    margin: 100px 0;
+    width: 100%;
+}
+
+.services-conteiner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    margin: 0 19%;
+    gap: 125px;
+}
+
+.services-conteiner > div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 82px;
+    width: 450px;
+}
+
+h3 {
+    color: #000;
+    font-family: Ubuntu;
+    font-size: 28px;
+    font-weight: 400;
+    width: 267px;
+    height: 33px;
+    margin-bottom: 17px;
+    
+}
+
+.block1 p {
+    color: #B2B2B2;
+    font-family: Ubuntu;
+    font-size: 14px;
+    font-weight: 400;
+    width: 292px;
+    height: 61px;
+}
+
+.block2 p {
+    color: #B2B2B2;
+    font-family: Ubuntu;
+    font-size: 14px;
+    font-weight: 400;
+    width: 290px;
+    height: 61px;
+}
+
+.block3 p {
+    color: #B2B2B2;
+    font-family: Ubuntu;
+    font-size: 14px;
+    font-weight: 400;
+    width: 309px;
+    height: 61px;
+}
+
+.block4 p {
+    color: #B2B2B2;
+    font-family: Ubuntu;
+    font-size: 14px;
+    font-weight: 400;
+    width: 247px;
+    height: 61px;
+}
+
+.block1 img{
+    margin-right: 67px;
+}
+.block2 img {
+    margin-right: 44px;
+}
+.block3 img {
+    margin-right: 48px;
+}
+.block4 img {
+    margin-right: 64px;
+}

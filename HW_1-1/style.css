@@ -22,7 +22,8 @@ ul {
 button {
     border: none;
     border-radius: 5px;
-    background: #5528FF;;
+    background: #5528FF;
+    ;
     color: #FFF;
     font-family: Ubuntu;
     font-size: 14px;
@@ -37,15 +38,15 @@ ul {
     font-weight: 700;
 }
 
-.header-main{
+.header-main {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin:3% 19%;
-    
+    margin: 3% 19%;
+
 }
 
-.logo-conteiner {
+.img-conteiner {
     display: flex;
     align-items: center;
     gap: 25px;
@@ -61,9 +62,9 @@ ul {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 0 19% 3% 18%;
+    margin: 7% 19% 3% 18%;
 }
-    
+
 .logo-block {
     display: flex;
     justify-content: space-between;
@@ -89,7 +90,7 @@ h2 {
     font-family: Ubuntu;
     font-size: 27px;
     font-weight: 400;
-    line-height: 160.86%; 
+    line-height: 160.86%;
     width: 62%;
     margin-bottom: 70px;
 }
@@ -105,9 +106,21 @@ h2 {
     padding: 16px 58px;
 }
 
-.img-wide {
+.thin-line {
     margin: 100px 0;
-    width: 100%;
+    height: 0.2px;
+    background-color:#d6d6d6;
+    position: relative;
+}
+
+.thin-line::before {
+    content: attr(data-text);
+    top: -10px;
+    left: 16.5%;
+    position: absolute;
+    background: #ffffff;
+    color: #C2C2C2;
+    padding: 0 20px;
 }
 
 .services-conteiner {
@@ -115,11 +128,11 @@ h2 {
     flex-wrap: wrap;
     justify-content: space-between;
     align-content: space-between;
-    margin: 0 19% 4% 19%;
+    margin: 0 19%;
     gap: 67px;
 }
 
-.services-conteiner > div {
+.services-conteiner>div {
     display: flex;
     align-items: center;
     width: 450px;
@@ -133,7 +146,7 @@ h3 {
     width: 267px;
     height: 33px;
     margin-bottom: 17px;
-    
+
 }
 
 .block1 p {
@@ -172,15 +185,18 @@ h3 {
     height: 61px;
 }
 
-.block1 img{
+.block1 img {
     margin-right: 67px;
 }
+
 .block2 img {
     margin-right: 44px;
 }
+
 .block3 img {
     margin-right: 48px;
 }
+
 .block4 img {
     margin-right: 64px;
 }
@@ -188,6 +204,62 @@ h3 {
 .block3 {
     margin-left: -25px;
 }
+
 .block4 {
     margin-right: -20px;
+}
+
+.clients-conteiner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 67px 106px;
+    margin: 0 19%;
+}
+
+.clients-conteiner img {
+    width: 173px;
+    height: 58px;
+    object-fit: contain;
+}
+
+.team-conteiner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 60px;
+    margin: 0 19%;
+}
+
+.img-team img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.team-conteiner div {
+    display: flex;
+    width: 280px;
+    height: 100px;
+}
+
+.text-team {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text-team h4 {
+    color: #202020;
+    font-family: Ubuntu;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.text-team p {
+    color: #B2B2B2;
+    font-family: Ubuntu;
+    font-size: 14px;
+    font-weight: 400;
 }

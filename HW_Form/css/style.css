@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Karla;
+}
+
+body {
+    background: #A7D7C5;
+}
+
+.main-conteiner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 141px;
+    position: relative;
+}
+
+form {
+    width: 698px;
+    height: 698px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 49.09px;
+    background: #F6FBF9;
+    z-index: 1;
+}
+
+form h1 {
+    color: #212B27;
+    text-align: center;
+    font-size: 55.226px;
+    font-weight: 700;
+    line-height: 71.794px;
+    padding: 67px 107px 0 107px;
+}
+
+form p {
+    color: #32403B;
+    text-align: center;
+    font-size: 23.011px;
+    font-weight: 400;
+    line-height: 29.914px;
+    padding: 6px 113px 49px 112px;
+}
+
+form input {
+    border-radius: 15.341px;
+    border: 1.534px solid rgba(0, 0, 0, 0.10);
+    background: #FFF;
+    margin: 0 62px 23px 60px;
+    width: 585px;
+    height: 84px;
+    padding: 32px 390px 32px 33px;
+    color: rgba(0, 0, 0, 0.50);
+    font-size: 23.01px;
+    font-weight: 400;
+    line-height: 19.5px;
+}
+input:focus {
+    outline: 1px solid #84C7AE; 
+  }
+
+#button {
+    width: 391.187px;
+    height: 90.51px;
+    color: #FFF;
+    text-align: center;
+    font-size: 33.749px;
+    font-weight: 700;
+    line-height: 43.874px;
+    border-radius: 23.011px;
+    background: #84C7AE;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 16px;
+    padding: 23px 73px;
+    transition: background-color 0.5s ease, color 0.5s ease;
+    outline:none
+}
+#button:hover {
+    background: #FFF;
+    color:#84C7AE;
+    box-shadow: 0 0 10px rgb(59 113 96 / 87%);
+}
+.square-left {
+    position: absolute;
+    width: 750px;
+    height: 750px;
+    bottom: 41%;
+    left: -6%; 
+    transform: rotate(45deg);
+    border-radius: 160px;
+    background: #C1E3D6;
+}
+.square-right {
+    position: absolute;
+    width: 750px;
+    height: 750px;
+    top: 56%;
+    right: -6%; 
+    transform: rotate(45deg);
+    border-radius: 160px;
+    background: #C1E3D6;
+}

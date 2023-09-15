@@ -25,11 +25,11 @@ for(let i = 0; i < 4; i++) {
     line1.innerText = '26'
     box.appendChild(line1)
 
-    let line2 = document.createElement('h3')
+    let line2 = document.createElement('h4')
     line2.innerText = 'ЛЕТ'
     box.appendChild(line2)
 
-    let line3 = document.createElement('h3')
+    let line3 = document.createElement('h5')
     line3.innerText = 'на рынке'
     box.appendChild(line3)
 

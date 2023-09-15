@@ -1,10 +1,11 @@
 const root = document.getElementById("root")
+
 const sectionElement = document.createElement('section')
 sectionElement.style.backgroundImage = "URL('Rectangle.svg')"
 sectionElement.classList.add('firstConteiner')
 
 root.appendChild(sectionElement)
-document.body.appendChild(root)
+
 
 const h1Element = document.createElement('h1')
 h1Element.textContent = 'РЕАЛИЗУЕМ КРУПНЕЙШИЕ ПРОЕКТЫ В МИРЕ'

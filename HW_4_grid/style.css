@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.grid-container {
+    display: grid;
+    margin: 30px 0;
+    grid-template:repeat(5,150px)/repeat(3,150px);
+    justify-content: center;
+}
+
+.number1 {
+    grid-column: 1/3;
+    background-color:rgb(249, 120, 249);
+}
+
+.number2 {
+    grid-row: 1/3;
+    grid-column: 3/4;
+    background-color:rgb(120, 249, 161);
+}
+
+.number3 {
+    background-color:rgb(152, 120, 249);
+}
+
+.number4 {
+    background-color:rgb(215, 249, 120);
+}
+
+.number5 {
+    grid-column: 1/3;
+    background-color:rgb(120, 238, 249);
+}
+
+.number6 {
+    background-color:rgb(252, 153, 154);
+}
+
+.number7 {
+    grid-column: 1/3;
+    grid-row:4/6;
+    background-color:rgb(252, 173, 149);
+}
+
+.number8 {
+    background-color:rgb(174, 161, 251);
+}
+
+.number9 {
+    background-color:rgb(215, 251, 161);
+}
+

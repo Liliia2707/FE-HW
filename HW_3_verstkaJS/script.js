@@ -13,12 +13,13 @@ sectionElement.appendChild(h1Element)
 
 const pElement = document.createElement('p')
 pElement.textContent = 'стадионы, газопроводы, мосты, дамбы'
+pElement.classList.add('text-item')
 sectionElement.appendChild(pElement)
 
 const divElement = document.createElement('div')
 divElement.classList.add('divConteiner')
 
-for(let i = 0; i < 4; i++) {
+for (let i = 0; i < 4; i++) {
     let box = document.createElement('div')
     box.classList.add('white-box')
 
@@ -40,13 +41,13 @@ sectionElement.appendChild(divElement)
 
 const h2Element = document.createElement('h2')
 h2Element.textContent = 'НАШИ САМЫЕ БОЛЬШИЕ ПРОЕКТЫ'
-document.body.appendChild(h2Element)
+root.appendChild(h2Element)
 
 const secondDivElem = document.createElement('div')
 secondDivElem.classList.add('progect-conteiner')
-document.body.appendChild(secondDivElem)
+root.appendChild(secondDivElem)
 
-for(let i = 0; i < 3; i++) {
+for (let i = 0; i < 3; i++) {
     let block = document.createElement('div')
     block.classList.add('progect-block')
     secondDivElem.appendChild(block)
@@ -70,7 +71,7 @@ for(let i = 0; i < 3; i++) {
 
 const redDiv = document.createElement('div')
 redDiv.classList.add('red-conteiner')
-document.body.appendChild(redDiv)
+root.appendChild(redDiv)
 
 const textDiv = document.createElement('div')
 textDiv.classList.add('text-div')
@@ -90,7 +91,7 @@ redDiv.appendChild(btnElem)
 
 const section2Elem = document.createElement('section')
 section2Elem.classList.add('second-section')
-document.body.appendChild(section2Elem)
+root.appendChild(section2Elem)
 
 let h4ElemFirst = document.createElement('h4')
 h4ElemFirst.textContent = 'ЧЕМ МЫ ЗАНИМАЕМСЯ?'
@@ -101,20 +102,20 @@ greyDivFirst.classList.add('grey-conteiner')
 section2Elem.appendChild(greyDivFirst)
 
 function createGreyBlocks(container) {
-for(let i = 0; i < 3; i++) {
-    let greyBox = document.createElement('div')
-    greyBox.classList.add('grey-box')
-    container.appendChild(greyBox)
+    for (let i = 0; i < 3; i++) {
+        let greyBox = document.createElement('div')
+        greyBox.classList.add('grey-box')
+        container.appendChild(greyBox)
 
-    let imgBuildElem = document.createElement('img')
-    imgBuildElem.src = 'media/building.svg';
-    imgBuildElem.alt = 'building';
-    greyBox.appendChild(imgBuildElem)
+        let imgBuildElem = document.createElement('img')
+        imgBuildElem.src = 'media/building.svg';
+        imgBuildElem.alt = 'building';
+        greyBox.appendChild(imgBuildElem)
 
-    let p3Elem = document.createElement('p')
-    p3Elem.textContent = 'CТРОИТЕЛЬСВТО ОФИСНЫХ ЗДАНИЙ'
-    greyBox.appendChild(p3Elem)
-}
+        let p3Elem = document.createElement('p')
+        p3Elem.textContent = 'CТРОИТЕЛЬСВТО ОФИСНЫХ ЗДАНИЙ'
+        greyBox.appendChild(p3Elem)
+    }
 }
 
 createGreyBlocks(greyDivFirst)

@@ -19,13 +19,13 @@
     padding: 0 28% 15px 28%;
     color: #FFF;
     text-align: center;
-    font-size: 60px;
+    font-size: 64px;
     font-weight: 500;
     letter-spacing: 1.28px;
     text-transform: uppercase;
 }
 
-.firstConteiner p {
+.text-item {
     color: #FFF;
     margin-bottom: 20px;
     text-align: center;
@@ -44,12 +44,11 @@
     flex-wrap: wrap;
 }
 
-
 .white-box {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 57px 0;
+    margin: 50px 0;
 }
 
 .white-box p:nth-child(1) {
@@ -89,7 +88,8 @@ h2 {
 .progect-conteiner {
     display: flex;
     justify-content: center;
-    padding: 0 21% 190px 21%;
+    margin-bottom: 190px;
+    padding: 0 21%;
     gap: 30px;
 }
 
@@ -123,14 +123,14 @@ h3 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
     min-height: 181px;
     background: #F7654A;
     margin-bottom: 150px;
+    padding: 0 21%;
 }
 
 .text-div {
-    margin: 30px 0 40px 21%;
+    margin: 30px 0 40px 0;
 }
 
 .text-div p:nth-child(1) {
@@ -149,7 +149,6 @@ h3 {
 }
 
 .red-conteiner button {
-    margin-right: 21%;
     padding: 14px 46px;
     color: #000;
     font-family: Oswald;
@@ -173,7 +172,8 @@ h4 {
 .grey-conteiner {
     display: flex;
     justify-content: center;
-    padding: 0 21% 150px 21%;
+    padding: 0 21%;
+    margin-bottom: 150px;
     gap: 30px;
 }
 
@@ -204,5 +204,69 @@ h4 {
 }
 
 .second-section .grey-conteiner:nth-of-type(2) {
-    padding: 0 21% 35px 21%;
+    margin-bottom: 35px;
+}
+
+@media only screen and (min-width: 1201px) {
+    .firstConteiner h1 {
+        font-size: 64px;
+    }
+
+    .progect-conteiner,
+    .grey-conteiner,
+    .red-conteiner {
+        padding: 0 21%;
+    }
+
+    .divConteiner {
+        width: 58%;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+    .firstConteiner h1 {
+        font-size: 52px;
+    }
+
+    .progect-conteiner,
+    .grey-conteiner,
+    .red-conteiner {
+        padding: 0 10%;
+    }
+
+    .divConteiner {
+        width: 78%;
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 787px) {
+    .firstConteiner h1 {
+        font-size: 40px;
+    }
+
+    .progect-conteiner,
+    .grey-conteiner,
+    .red-conteiner {
+        padding: 0 5%;
+    }
+
+    .divConteiner {
+        width: 88%;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+    .firstConteiner h1 {
+        font-size: 28px;
+    }
+
+    .progect-conteiner,
+    .grey-conteiner,
+    .red-conteiner {
+        padding: 0 2%;
+    }
+
+    .divConteiner {
+        width: 92%;
+    }
 }

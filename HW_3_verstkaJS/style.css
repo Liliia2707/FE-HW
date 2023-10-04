@@ -88,9 +88,14 @@ h2 {
 .progect-conteiner {
     display: flex;
     justify-content: center;
+    /* flex-wrap: wrap; */
     margin-bottom: 190px;
     padding: 0 21%;
     gap: 30px;
+}
+
+.progect-block {
+    max-width: 350px;
 }
 
 .progect-block div {
@@ -172,6 +177,7 @@ h4 {
 .grey-conteiner {
     display: flex;
     justify-content: center;
+    /* flex-wrap: wrap; */
     padding: 0 21%;
     margin-bottom: 150px;
     gap: 30px;

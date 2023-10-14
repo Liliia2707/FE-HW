@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="root">
+        <img id="bear-img" src="./media/bear.svg" alt="bear">
+        <div class="main-conteiner">
+            <form class="form-block">
+                <button class="btnChangeMode">Dark Mode</button>
+                <div class="header-block">
+                    <div>
+                        <h1>Create account</h1>
+                        <ul>
+                            <li><a href="https://www.facebook.com"><img class="black-icon" src="./media/facebook.svg"
+                                        alt="facebook"></a></li>
+                            <li><a href="https://www.twitter.com"><img class="black-icon" src="./media/twitter.svg"
+                                        alt="twitter"></a></li>
+                            <li><a href="https://www.google.com"><img class="black-icon" src="./media/google.svg"
+                                        alt="google"></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <p>Or register using email & password</p>
+                </div>
+                <div class="input-block">
+                    <label for="name">Full name</label>
+                    <input class="input" id="name" type="text" value="" placeholder="Enter your full name" required>
+                    <label for="email">Email address</label>
+                    <input class="input" id="email" type="text" value="" placeholder="Enter your email address"
+                        required>
+                    <label for="password">Create password</label>
+                    <input class="input" id="password" type="password" value="" placeholder="Enter your password"
+                        required>
+                    <label for="confirm">Confirm password</label>
+                    <input class="input" id="confirm" type="password" value="" placeholder="Confirm your password"
+                        required>
+                </div>
+                <div class="checkbocks-block">
+                    <input type="radio" id="radio" class="radio-btn">
+                    <label for="radio">I agree to the terms & privacy policy</label>
+                </div>
+                <button type="submit" class="btn">Register</button>
+            </form>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>

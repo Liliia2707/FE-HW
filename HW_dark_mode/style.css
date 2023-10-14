@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.root {
+    display: flex;
+}
+
+#bear-img {
+    width: 50%;
+    object-fit: cover;
+    height: 1024px;
+}
+
+.main-conteiner {
+    width: 50%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    min-height: 1024px;
+}
+
+.form-block {
+    display: flex;
+    flex-direction: column;
+    margin: 103px 19%;
+    width: 62%;
+    border-radius: 10px;
+    background-color: #2D2F30;
+}
+
+.header-block {
+    margin: 24px 42px 0 42px;
+    padding-bottom: 17px;
+    border-bottom: 1px solid black;
+}
+
+.header-block div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    gap: 19px;
+}
+
+
+h1 {
+    font-size: 25px;
+    font-weight: 700;
+    color: white;
+}
+
+p {
+    color: #F6F6F6;
+    font-size: 14px;
+    margin-top: 17px;
+    color: white;
+}
+
+.input-block {
+    margin: 5px 41px;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    color: #B0B0B0;
+    margin-bottom: 22px;
+    margin-top: 19px;
+    cursor: pointer;
+}
+
+.input {
+    height: 60px;
+    border-radius: 4px;
+    background: #414344;
+    border: none;
+    color: #151718;
+    padding: 22px 23px 19px 23px;
+}
+
+.checkbocks-block {
+    display: flex;
+    margin: 23px 42px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 70px;
+}
+
+.radio-btn {
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.btn {
+    margin: 0 42px 60px 42px;
+    height: 60px;
+    border-radius: 4px;
+    background: #2D76E2;
+    border: none;
+    cursor: pointer;
+}
+
+.btnChangeMode {
+    width: 65px;
+    height: 35px;
+    border: 1px solid white;
+    border-radius: 5%;
+    cursor: pointer;
+    padding: 3px;
+    margin: 5px;
+}
+
+.lightMode .form-block {
+    background-color: white;
+}
+
+.lightMode .black-icon {
+    background-color: black;
+}
+
+.lightMode .input {
+    background: #ffffff;
+    border: 1px solid gray;
+}
+
+.lightMode h1 {
+    color: black;
+}
+
+.lightMode p {
+    color: black;
+}
+
+.lightMode .main-conteiner {
+    background-color: white;
+}

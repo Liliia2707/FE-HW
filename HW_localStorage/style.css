@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    gap: 20px;
+}
+
+.btnIncrement {
+    height: 40px;
+    width: 40px;
+    background: red;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btnDecrement {
+    height: 40px;
+    width: 40px;
+    background: blue;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+p {
+    height: 40px;
+    width: 40px;
+    border: 1px solid black;
+    font-size: 24px;
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 5px;
+}

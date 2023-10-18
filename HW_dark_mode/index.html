@@ -13,20 +13,27 @@
 
 <body>
     <div class="root">
-        <img id="bear-img" src="./media/bear.svg" alt="bear">
+        <div class="bear">
+            <img id="bear-img" src="./media/bear.svg" alt="bear">
+        </div>
         <div class="main-conteiner">
+            <button class="btnChangeMode">Dark Mode</button>
             <form class="form-block">
-                <button class="btnChangeMode">Dark Mode</button>
+
                 <div class="header-block">
                     <div>
                         <h1>Create account</h1>
                         <ul>
-                            <li><a href="https://www.facebook.com"><img class="black-icon" src="./media/facebook.svg"
-                                        alt="facebook"></a></li>
-                            <li><a href="https://www.twitter.com"><img class="black-icon" src="./media/twitter.svg"
-                                        alt="twitter"></a></li>
-                            <li><a href="https://www.google.com"><img class="black-icon" src="./media/google.svg"
-                                        alt="google"></a>
+                            <li><a href="https://www.facebook.com">
+                                    <div class="icon facebook">
+                                    </div>
+                                </a></li>
+                            <li><a href="https://www.twitter.com">
+                                    <div class="icon twitter"></div>
+                                </a></li>
+                            <li><a href="https://www.google.com">
+                                    <div class="icon google"></div>
+                                </a>
                             </li>
                         </ul>
                     </div>
@@ -46,8 +53,11 @@
                         required>
                 </div>
                 <div class="checkbocks-block">
-                    <input type="radio" id="radio" class="radio-btn">
-                    <label for="radio">I agree to the terms & privacy policy</label>
+                    <input type="checkbox" id="checkbox" class="checkbox-btn">
+                    <label for="checkbox">
+                        <span class="gray-text">I agree to the</span> <span class="blue-text">terms</span> <span
+                            class="gray-text">&</span> <span class="blue-text">privacy policy</span>
+                    </label>
                 </div>
                 <button type="submit" class="btn">Register</button>
             </form>

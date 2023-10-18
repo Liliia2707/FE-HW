@@ -17,8 +17,12 @@ html {
     display: flex;
 }
 
-#bear-img {
+.bear {
     width: 50%;
+}
+
+#bear-img {
+    width: 100%;
     object-fit: cover;
     height: 1024px;
 }
@@ -28,7 +32,7 @@ html {
     background-color: black;
     display: flex;
     justify-content: center;
-    min-height: 1024px;
+    position: relative;
 }
 
 .form-block {
@@ -90,8 +94,12 @@ label {
     border-radius: 4px;
     background: #414344;
     border: none;
-    color: #151718;
+    color: #B0B0B0;
     padding: 22px 23px 19px 23px;
+}
+
+.input::placeholder {
+    color: black;
 }
 
 .checkbocks-block {
@@ -99,14 +107,22 @@ label {
     margin: 23px 42px;
     justify-content: space-between;
     align-items: center;
-    gap: 70px;
 }
 
-.radio-btn {
+.checkbox-btn {
     border-radius: 50%;
     width: 24px;
     height: 24px;
     cursor: pointer;
+}
+
+.gray-text {
+    color: #B0B0B0;
+}
+
+.blue-text {
+    color: #2D76E2;
+    text-decoration: underline;
 }
 
 .btn {
@@ -116,29 +132,87 @@ label {
     background: #2D76E2;
     border: none;
     cursor: pointer;
+    color: #FCFCFC;
+    font-family: Inter;
+    font-weight: 700;
+}
+
+.btn:hover {
+    background-image: radial-gradient(circle at center, #0A55C6, #2D2F30);
 }
 
 .btnChangeMode {
-    width: 65px;
-    height: 35px;
-    border: 1px solid white;
-    border-radius: 5%;
-    cursor: pointer;
+    display: inline-block;
     padding: 3px;
-    margin: 5px;
+    margin: 7px;
+    color: #000000;
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
+    transition: all 0.5s;
+    position: absolute;
+    overflow: hidden;
+    z-index: 1;
+    width: 100px;
+    height: 30px;
+    top: 0;
+    right: 0;
+    border: none;
 }
 
-.lightMode .form-block {
-    background-color: white;
+.btnChangeMode:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #E3E1E1;
+    z-index: -2;
 }
 
-.lightMode .black-icon {
-    background-color: black;
+.btnChangeMode:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: #2D2F30;
+    transition: all 0.3s;
+    z-index: -1;
+}
+
+.btnChangeMode:hover {
+    color: #E3E1E1;
+}
+
+.btnChangeMode:hover:before {
+    width: 100%;
+}
+
+.facebook {
+    background-image: url(media/facebook.svg);
+    width: 20px;
+    aspect-ratio: 1;
+}
+
+.twitter {
+    background-image: url(media/twitter.svg);
+    width: 20px;
+    aspect-ratio: 1;
+}
+
+.google {
+    background-image: url(media/google.svg);
+    width: 20px;
+    aspect-ratio: 1;
 }
 
 .lightMode .input {
     background: #ffffff;
-    border: 1px solid gray;
+    border: 1px solid #E3E1E1;
+    color: #414344;
 }
 
 .lightMode h1 {
@@ -146,9 +220,41 @@ label {
 }
 
 .lightMode p {
-    color: black;
+    color: #676767;
 }
 
-.lightMode .main-conteiner {
+.lightMode.main-conteiner {
+    background: #FBFAFA;
+}
+
+.lightMode.form-block {
     background-color: white;
+}
+
+.lightMode .header-block {
+    border-bottom: 1px solid #E3E1E1;
+}
+
+.lightMode .input::placeholder {
+    color: #E3E1E1;
+}
+
+.lightMode label {
+    color: #414344;
+}
+
+.lightMode .facebook {
+    background-image: url('media/facebook-black.png');
+}
+
+.lightMode .twitter {
+    background-image: url('media/twitter-black.svg');
+}
+
+.lightMode .google {
+    background-image: url('media/google-black.svg');
+}
+
+.lightMode .btn:hover {
+    background-image: radial-gradient(circle at center, #0A55C6, #ffffff);
 }

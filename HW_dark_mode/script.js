@@ -1,32 +1,30 @@
 
 const formElem = document.querySelector('.form-block')
-const h1Element = document.querySelector('h1')
-const pElement = document.querySelector('p')
-const imgElement = document.querySelectorAll('icon')
-const inputElement = document.querySelector('.input')
-const mode = document.querySelector('.btnChangeMode')
-const mainDiv = document.querySelector('.main-conteiner')
+const body = document.body
+const savedTheme = localStorage.getItem('theme')
+const themeSwitch = document.getElementById('themeSwitch')
+const savedThemeIsLight = savedTheme === 'light';
 
+themeSwitch.checked = savedThemeIsLight;
 
-mode.addEventListener("click", (e) => {
-    e.preventDefault()
-    e.stopPropagation()
-    formElem.classList.toggle("lightMode")
-    h1Element.classList.toggle("lightMode")
-    pElement.classList.toggle("lightMode")
-    inputElement.classList.toggle("lightMode")
-    mainDiv.classList.toggle("lightMode")
-    for (let i = 0; i < imgElement.length; i++) {
-        imgElement[i].toggle("lightMode")
-    }
-    if (formElem.classList.contains("lightMode")) {
-        mode.textContent = "Dark Mode"
-        localStorage.setItem('theme', 'light')
-    } else {
-        mode.textContent = "Light Mode"
+themeSwitch.addEventListener("change", function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    if (document.body.classList.contains("lightMode")) {
         localStorage.setItem('theme', 'dark')
+    } else {
+        localStorage.setItem('theme', 'light')
     }
+
+    document.body.classList.toggle("lightMode")
 })
+
+if (savedTheme === 'light') {
+    body.classList.add("lightMode")
+} else {
+    body.classList.remove("lightMode")
+}
 
 formElem.addEventListener('submit', function (event) {
     event.preventDefault()

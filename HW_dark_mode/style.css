@@ -13,7 +13,107 @@ html {
     line-height: normal;
 }
 
-.root {
+header {
+    display: flex;
+    background-color: #151718;
+    height: 90px;
+    align-items: center;
+    width: 100%;
+}
+
+.logo-img {
+    height: 40px;
+    width: 40px;
+    margin: 0 1.6rem 0 2.4rem;
+}
+
+h2 {
+    color: #ffffff;
+    font-weight: 700;
+    padding-right: 46.5%;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.menu {
+    gap: 3.2rem;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 75px;
+    height: 34px;
+    margin-left: 8%;
+    margin-right: 4%;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #B0B0B0;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "☀️";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #ffffff;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    border-radius: 50%;
+    line-height: 26px;
+    text-align: center;
+}
+
+input:checked+.slider {
+    background-color: #414344;
+}
+
+input:checked+.slider:before {
+    content: "🌙";
+    left: 44px;
+    background-color: blue;
+    color: white;
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+h3 {
+    color: #ffffff;
+}
+
+.arrow-down-img {
+    background-image: url(media/arrow-down-s-line.svg);
+    margin-left: 12px;
+    width: 18px;
+    aspect-ratio: 1;
+}
+
+.main-section {
     display: flex;
 }
 
@@ -62,7 +162,6 @@ ul {
     gap: 19px;
 }
 
-
 h1 {
     font-size: 25px;
     font-weight: 700;
@@ -102,7 +201,7 @@ label {
     color: black;
 }
 
-.checkbocks-block {
+.checkbox-block {
     display: flex;
     margin: 23px 42px;
     justify-content: space-between;
@@ -114,7 +213,30 @@ label {
     width: 24px;
     height: 24px;
     cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: #B0B0B0;
+    outline: none;
+    border: 2px solid #B0B0B0;
+    margin-right: 10px;
+    position: relative;
 }
+
+.checkbox-btn:checked::after {
+    content: '\2714';
+    font-size: 20px;
+    position: absolute;
+    top: -4px;
+    left: 2px;
+    color: #2D2F30;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+}
+
 
 .gray-text {
     color: #B0B0B0;
@@ -135,60 +257,11 @@ label {
     color: #FCFCFC;
     font-family: Inter;
     font-weight: 700;
+    transition: background 0.5s ease;
 }
 
 .btn:hover {
-    background-image: radial-gradient(circle at center, #0A55C6, #2D2F30);
-}
-
-.btnChangeMode {
-    display: inline-block;
-    padding: 3px;
-    margin: 7px;
-    color: #000000;
-    font-size: 9px;
-    text-transform: uppercase;
-    letter-spacing: 0.15rem;
-    transition: all 0.5s;
-    position: absolute;
-    overflow: hidden;
-    z-index: 1;
-    width: 100px;
-    height: 30px;
-    top: 0;
-    right: 0;
-    border: none;
-}
-
-.btnChangeMode:after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #E3E1E1;
-    z-index: -2;
-}
-
-.btnChangeMode:before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0%;
-    height: 100%;
-    background-color: #2D2F30;
-    transition: all 0.3s;
-    z-index: -1;
-}
-
-.btnChangeMode:hover {
-    color: #E3E1E1;
-}
-
-.btnChangeMode:hover:before {
-    width: 100%;
+    background: radial-gradient(circle at center, #0A55C6, #2D2F30);
 }
 
 .facebook {
@@ -209,6 +282,7 @@ label {
     aspect-ratio: 1;
 }
 
+
 .lightMode .input {
     background: #ffffff;
     border: 1px solid #E3E1E1;
@@ -223,11 +297,11 @@ label {
     color: #676767;
 }
 
-.lightMode.main-conteiner {
+.lightMode .main-conteiner {
     background: #FBFAFA;
 }
 
-.lightMode.form-block {
+.lightMode .form-block {
     background-color: white;
 }
 
@@ -257,4 +331,28 @@ label {
 
 .lightMode .btn:hover {
     background-image: radial-gradient(circle at center, #0A55C6, #ffffff);
+}
+
+.lightMode header {
+    background-color: #ffffff;
+}
+
+.lightMode h2,
+.lightMode h3,
+.lightMode a {
+    color: #2D2F30;
+}
+
+.lightMode input:checked+.slider {
+    background-color: #e3e3e3;
+}
+
+.lightMode input:checked+.slider:before {
+    background-color: #414344;
+}
+
+.lightMode .arrow-down-img {
+    background-image: url(media/arrow-down-white.svg);
+    width: 13px;
+    height: 8px;
 }

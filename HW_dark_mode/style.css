@@ -45,7 +45,7 @@ a {
 .switch {
     position: relative;
     display: inline-block;
-    width: 75px;
+    min-width: 75px;
     height: 34px;
     margin-left: 8%;
     margin-right: 4%;
@@ -115,6 +115,7 @@ h3 {
 
 .main-section {
     display: flex;
+    width: 100%;
 }
 
 .bear {
@@ -132,7 +133,6 @@ h3 {
     background-color: black;
     display: flex;
     justify-content: center;
-    position: relative;
 }
 
 .form-block {
@@ -355,4 +355,8 @@ label {
     background-image: url(media/arrow-down-white.svg);
     width: 13px;
     height: 8px;
+}
+
+.lightMode .checkbox-btn:checked::after {
+    color: #ffffff
 }

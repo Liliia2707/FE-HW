@@ -1,5 +1,6 @@
 const root = document.querySelector('#root')
 
+
 function renderCard({ firstName, lastName, age, email
     , image, phone }) {
     const conteiner = document.createElement('div')

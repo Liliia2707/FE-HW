@@ -7,13 +7,72 @@
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
     <div id="root">
-        <div class="post-conteiner"></div>
+        <header>
+            <div>
+                <img id="sanakilogo" src="./media/sanakilogo.svg" alt="sanakilogo">
+            </div>
+            <div>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Shop Online</a></li>
+                    <li><a href="#">What’s New</a></li>
+                    <li><a href="3">Contact</a></li>
+                    <li><a href="#">About us</a></li>
+                </ul>
+            </div>
+            <div>
+                <button class="btn-up">Sign up</button>
+                <button class="btn-in">Sign in</button>
+            </div>
+        </header>
+        <section class="main-block">
+            <h1></h1>
+            <form>
+                <input type="text" id="search" name="search" placeholder="Search Here Shop or Product">
+                <button type="submit">Search</button>
+            </form>
+        </section>
+        <section class="categories-block">
+            <h2>Shop Our Top Categories</h2>
+            <div class="img-categories">
+                <div>
+                    <h3>Tech</h3>
+                    <img src="./media/lap.svg" alt="lap">
+                </div>
+                <div>
+                    <h3>Electronics</h3>
+                    <img src="./media/watch.svg" alt="watch">
+                </div>
+                <div>
+                    <h3>Health &
+                        Beauty</h3>
+                    <img src="./media/Cosmetics.svg" alt="Cosmetics">
+                </div>
+                <div>
+                    <h3>Fashion</h3>
+                    <img src="./media/fasion.svg" alt="fasion">
+                </div>
+                <div>
+                    <h3>Furniture</h3>
+                    <img src="./media/furniture.svg" alt="furniture">
+                </div>
+                <div>
+                    <h3>Sports</h3>
+                    <img src="./media/sport.svg" alt="sport">
+                </div>
+            </div>
+        </section>
+        <section class="deals-block">
+            <h3>Best Deals For You!</h3>
+            <div class="post-conteiner"></div>
+        </section>
+
     </div>
     <script src="./script.js"></script>
 </body>

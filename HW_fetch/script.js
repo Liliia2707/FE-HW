@@ -2,21 +2,29 @@ const root = document.querySelector('#root')
 const postConteiner = document.querySelector('.post-conteiner')
 
 const renderPost = (arrayOfproducts) => {
-    arrayOfproducts.slice(0, 4).forEach((products) => {
+    arrayOfproducts.slice(0, 8).forEach((products) => {
         console.log(products)
+        const btnCard = document.createElement('button')
+        const textDiv = document.createElement('div')
         const conteiner = document.createElement('div')
-        conteiner.classList.add('conteiner')
         const imageElem = document.createElement('img')
         const titleElem = document.createElement('h2')
         const priceElem = document.createElement('p')
         const descriptionElem = document.createElement('p')
 
+        textDiv.classList.add('textDiv')
+        btnCard.classList.add('btnCard')
+        conteiner.classList.add('conteiner')
+
         imageElem.src = products.images[0]
         titleElem.innerText = products.title
         priceElem.innerText = products.price
         descriptionElem.innerText = products.description
+        btnCard.innerText = 'Add to cart'
 
-        conteiner.append(imageElem, titleElem, priceElem, descriptionElem)
+        textDiv.append(titleElem, priceElem, descriptionElem)
+        // conteiner.append(imageElem, titleElem, priceElem, descriptionElem, btnCard)
+        conteiner.append(imageElem, textDiv, btnCard)
         postConteiner.append(conteiner)
     })
 }

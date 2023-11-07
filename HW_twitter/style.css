@@ -56,9 +56,14 @@ header h3 {
 
 .icon {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     margin-left: 57px;
     cursor: pointer;
+}
+
+.icon img:first-child {
+    margin-right: 8px;
 }
 
 .icon img {

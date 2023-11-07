@@ -3,14 +3,82 @@
     padding: 0;
 }
 
+body,
+html {
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px 0 20px;
+    height: 53px;
+    border-bottom: 1px solid #555;
+}
+
+header p {
+    font-size: 20px;
+}
+
+.logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 250px;
+    margin-bottom: 5px;
+}
+
+.divInput {
+    display: flex;
+    align-items: start;
+    gap: 12px;
+}
+
+.logo img {
+    width: 170px;
+    height: 34px;
+    margin-left: 55px;
+    cursor: pointer;
+}
+
+#root {
+    margin: 20px;
+    background-color: black;
+    width: 600px;
+}
+
+#postForm {
+    padding: 20px 20px 0 20px;
+    border-bottom: 1px solid #555;
+}
+
+
 #text {
     width: 500px;
     height: 40px;
+    background-color: black;
+    color: white;
+    border: none;
+}
+
+#button {
+    width: 79px;
+    height: 36px;
+    padding: 9px 16px;
+    border-radius: 36px;
+    opacity: 0.5;
+    background: #1D9BF0;
+    color: white;
+    cursor: pointer;
+    border: none;
 }
 
 .postCard {
     display: flex;
     flex-direction: column;
+    padding: 5px 20px 20px 20px;
+    border-bottom: 1px solid #555;
 }
 
 .post-img {
@@ -21,11 +89,9 @@
 .reaction {
     height: 21px;
     width: 20px;
+    cursor: pointer;
 }
 
-.liked.reaction {
-    color: brown;
-}
 
 .userAvatar {
     height: 50px;
@@ -43,8 +109,19 @@
 
 .divPost {
     display: flex;
-    align-items: center;
-    gap: 5px;
+    gap: 12px;
     margin-top: 12px;
     margin-bottom: 12px;
+}
+
+.divLike {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: 60px;
+}
+
+.post-img {
+    margin-bottom: 19px;
+    margin-left: 45px;
 }

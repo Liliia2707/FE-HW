@@ -10,11 +10,19 @@
 
 <body>
     <div id="root">
+        <header>
+            <p>Home</p>
+            <img src="./media/Top-Tweets.svg" alt="">
+        </header>
         <form id="postForm">
-            <label for="text">Text:</label>
-            <input type="text" id="text" name="text">
-
-            <input type="submit" id="button" value="Tweet" />
+            <div class="divInput">
+                <img class="userAvatar" id="userAvatar1" src="">
+                <input type="text" id="text" name="text" placeholder="What’s happening?">
+            </div>
+            <div class="logo">
+                <img src="./media/Meta.png" alt="">
+                <input type="submit" id="button" value="Tweet" />
+            </div>
         </form>
     </div>
     <script src="./scripts.js"></script>

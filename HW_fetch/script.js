@@ -23,7 +23,6 @@ const renderPost = (arrayOfproducts) => {
         btnCard.innerText = 'Add to cart'
 
         textDiv.append(titleElem, priceElem, descriptionElem)
-        // conteiner.append(imageElem, titleElem, priceElem, descriptionElem, btnCard)
         conteiner.append(imageElem, textDiv, btnCard)
         postConteiner.append(conteiner)
     })

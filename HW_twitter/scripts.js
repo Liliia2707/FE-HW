@@ -1,11 +1,11 @@
 const root = document.querySelector('#root')
 const form = document.querySelector('#postForm')
+const header = document.querySelector('header')
 const textInput = document.querySelector('#text')
 const userAvatarElement = document.querySelector('#userAvatar1');
 const userNameElement = document.querySelector('#userName1');
-const id = 16
+const id = 27
 
-let likeCount = ""
 
 const renderNewPost = (post, user) => {
     const postCard = document.createElement('div')
@@ -25,24 +25,31 @@ const renderNewPost = (post, user) => {
     divPost.classList.add('divPost')
     divLike.classList.add('divLike')
 
+    let likeCount = null
 
     reaction.addEventListener('click', () => {
-        likeCount++
-        likeCounter.innerText = likeCount
-        reaction.src = 'media/liked.png'
+        if (likeCount === null) {
+            likeCount = 1
+            likeCounter.innerText = likeCount
+            reaction.src = 'media/liked.png'
+        } else {
+            likeCount = null;
+            likeCounter.innerText = ''
+            reaction.src = 'media/React.svg'
+        }
     })
 
     postText.innerText = post.body
     reaction.src = 'media/React.svg'
     likeCounter.innerText = likeCount
-    userName.innerText = `@${user.firstName} ${user.lastName} `
+    userName.innerText = `@${user.username}`
     userAvatar.src = user.image
 
     divLike.append(reaction, likeCounter)
     divAvatar.append(userName, postText)
     divPost.append(userAvatar, divAvatar)
     postCard.append(divPost, divLike)
-    root.append(postCard)
+    root.prepend(header, form, postCard)
 }
 
 const addNewPost = async (post) => {
@@ -95,7 +102,7 @@ const getPost = async () => {
         const userWithId = userData.users.find(user => user.id === id);
 
         if (userWithId) {
-            userAvatarElement.src = userWithId.image;
+            userAvatarElement.src = userWithId.image
         }
 
     } catch (error) {
@@ -105,8 +112,8 @@ const getPost = async () => {
 
 const renderUserPost = (posts, users) => {
 
-    posts.slice(0, 4).forEach(post => {
-        const user = users.find(user => user.id === post.id);
+    posts.slice(0, 5).forEach(post => {
+        const user = users.find(user => user.id === post.id)
         if (user) {
             const postCard = document.createElement('div')
             const postText = document.createElement('p')
@@ -118,7 +125,6 @@ const renderUserPost = (posts, users) => {
             const divPost = document.createElement('div')
             const divLike = document.createElement('div')
 
-
             postCard.classList.add('postCard')
             reaction.classList.add('reaction')
             userAvatar.classList.add('userAvatar')
@@ -127,16 +133,25 @@ const renderUserPost = (posts, users) => {
             divLike.classList.add('divLike')
 
             let likeCount = post.reactions
+            let isLiked = false
+
             reaction.addEventListener('click', () => {
-                likeCount++
+                if (isLiked) {
+                    likeCount--
+                    reaction.src = 'media/React.svg'
+                } else {
+                    likeCount++
+                    reaction.src = 'media/liked.png'
+                }
+
                 likeCounter.innerText = likeCount
-                reaction.src = 'media/liked.png'
+                isLiked = !isLiked
             })
 
             postText.innerText = post.body
             likeCounter.innerText = post.reactions
             reaction.src = 'media/React.svg'
-            userName.innerText = `@${user.firstName} ${user.lastName} `
+            userName.innerText = `@${user.username}`
             userAvatar.src = user.image
             userAvatarElement.src = user.image
             divLike.append(reaction, likeCounter)

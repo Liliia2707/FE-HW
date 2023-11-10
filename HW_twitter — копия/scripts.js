@@ -52,6 +52,7 @@ const renderNewPost = (post, user) => {
     root.prepend(header, form, postCard)
 }
 
+
 const addNewPost = async (post) => {
     try {
         const response = await fetch('https://dummyjson.com/posts/add', {
@@ -159,11 +160,9 @@ const renderUserPost = (posts, users) => {
             divPost.append(userAvatar, divAvatar)
             postCard.append(divPost, divLike)
             root.append(postCard)
-
         }
     })
 }
 
 getPost()
-
 

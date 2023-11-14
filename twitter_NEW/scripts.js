@@ -124,7 +124,7 @@ const renderUserPost = async () => {
         root.append(postCard)
 
         userAvatar.addEventListener('click', () => {
-            window.location.href = `/user.html?userId=${post.userId}`
+            window.location.href = `/FE-HW/FE-HW/twitter_NEW/user.html?userId=${post.userId}`
         })
     }
 }
